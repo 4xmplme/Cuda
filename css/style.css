@@ -1,0 +1,414 @@
+@import url(nullstyle.css);
+@import url(https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap);
+body {
+  font-family: 'Titillium Web';
+  color: #ffffff;
+  text-align: center;
+}
+
+a, button, input, textarea {
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.section {
+  padding: 120px 0px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100px;
+  margin: 20px auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto;
+  max-width: 580px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  padding: 30px 80px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 50px;
+  margin-top: 80px;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.header {
+  background: #87509c;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+}
+
+.header__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu ul a {
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+
+.header__menu ul a:hover {
+  background: #643a79;
+  border: 0px solid;
+  border-radius: 5px;
+}
+
+.welcome {
+  background: #87509c;
+}
+
+.welcome__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.welcome__button {
+  background-color: #eb7d4b;
+  -webkit-box-shadow: 0 3px 0 #c86a40;
+          box-shadow: 0 3px 0 #c86a40;
+  margin-top: 60px;
+}
+
+.services {
+  background: #17c2a4;
+}
+
+.services__title:after {
+  background: #14a58c;
+}
+
+.services__column-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 60px 0px 30px;
+}
+
+.services__column-text {
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.team {
+  background: #e7f1f8;
+  color: #3c4761;
+}
+
+.team__title:after {
+  background-color: #c8d9e5;
+}
+
+.team__column-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 40px 0px 15px;
+}
+
+.team__column-subtitle {
+  color: #30bae7;
+}
+
+.team__column-text {
+  margin: 30px 0px;
+}
+
+div .team__column-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills {
+  background: white;
+  color: #3c4761;
+}
+
+.skills__title:after {
+  background-color: #dfe8ed;
+}
+
+.skills__column img {
+  max-width: 300px;
+}
+
+.skills__column-text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.portfolio {
+  background: #ffdd99;
+  color: #393939;
+}
+
+.portfolio .portfolio__title:after {
+  background-color: #ebc985;
+}
+
+.portfolio__switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 45px;
+  gap: 25px;
+}
+
+.portfolio__switcher-item {
+  min-width: 20%;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #ebc985;
+  padding: 10px 25px;
+}
+
+.portfolio__switcher-item:focus {
+  background-color: white;
+}
+
+.portfolio__column {
+  max-width: 45%;
+}
+
+.portfolio__column-text {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.portfolio__button {
+  background: #17c2a4;
+  -webkit-box-shadow: 0 3px 0 #14a58c;
+          box-shadow: 0 3px 0 #14a58c;
+}
+
+.testimonials {
+  background: #d74680;
+}
+
+.testimonials__title:after {
+  background-color: #b73c6d;
+}
+
+.testimonials__column {
+  max-width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 25px;
+}
+
+.testimonials__column-content {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.testimonials__column-text {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 31px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.testimonials__column-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 30px;
+}
+
+.testimonials__column-subtitle {
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffdd99;
+}
+
+.git {
+  background: #3c5499;
+  padding: 120px 0px;
+}
+
+.git__title:after {
+  background-color: #273a71;
+}
+
+.git div.git__subtitle {
+  max-width: 90%;
+}
+
+.git__form {
+  margin: 70px 10px 0px 10px;
+}
+
+.git__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.git__inputs-item {
+  min-width: calc(50% - 10px);
+}
+
+.git__textarea {
+  margin-top: 25px;
+}
+
+.git__textarea-item {
+  width: 100%;
+  max-width: 100%;
+  min-height: 200px;
+}
+
+.git__inputs-item, .git__textarea-item {
+  background-color: #273a71;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.git__inputs-item::-webkit-input-placeholder, .git__textarea-item::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.git__button {
+  color: white;
+  background-color: #30bae7;
+  -webkit-box-shadow: 0 3px 0 #299ec5;
+          box-shadow: 0 3px 0 #299ec5;
+}
+
+.footer {
+  background-color: #273a71;
+  padding: 40px 0px;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.footer__links a:hover {
+  color: #30bae7;
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+  }
+  .column {
+    max-width: 45%;
+  }
+  .portfolio__column {
+    max-width: 90%;
+  }
+  .testimonials__column {
+    max-width: 90%;
+  }
+  .git__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+  }
+  .footer__links {
+    display: none;
+  }
+}

@@ -1,5 +1,14 @@
 @import url(nullstyle.css);
 @import url(https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap);
+// @import url(fonts.css);
+
+@font-face {
+	font-family: 'Titillium Web Regular';
+	src: local('Titillium Web Regular'), url(../fonts/TitilliumWeb-Regular.ttf) format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
 
 $orange-color: #eb7d4b;
 $darkorange-color: #c86a40;
@@ -26,10 +35,37 @@ body {
 	font-family: 'Titillium Web';
 	color: $white-color;
 	text-align: center;
+	
+	&._lock {
+		overflow: hidden;
+	}
 }
 
 a, button, input, textarea{
 	color: inherit;
+}
+
+#arrowTop {
+	font-size: 30px;
+	padding: 10px;
+	bottom: 20px;
+	right: 20px;
+	color: $darkwhite-color;
+	background-color: $black-color;
+	border-radius: 5px;
+	position: fixed;
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 2;
+
+	&::before {
+		content: '▲';
+	}
+
+	&:hover {
+		color: $white-color;
+		opacity: 0.75;
+	}
 }
 
 .container {
@@ -40,7 +76,7 @@ a, button, input, textarea{
 }
 
 .section {
-	padding: 120px 0px;
+	padding: 60px 0px;
 }
 
 .title {
@@ -108,23 +144,31 @@ a, button, input, textarea{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 50px;
+		padding-top: 30px;
 	}
 
-	&__menu ul{
-		display: flex;
+	&__menu {
 
-		a {
-			padding: 10px 15px;
-			margin-left: 10px;
-	
-			&:hover {
-				background: $darkviolete-color;
-				border: 0px solid;
-				border-radius: 5px;
+		&-icon {
+			display: none;
+		}
+
+		&-list {
+
+			display: flex;
+
+			a {
+				padding: 10px 15px;
+				margin-left: 10px;
+
+				&:hover {
+					background: $darkviolete-color;
+					border: 0px solid;
+					border-radius: 5px;
+				}
 			}
 		}
-	}	
+	}
 }
 
 .welcome {
@@ -154,6 +198,15 @@ a, button, input, textarea{
 	}
 	
 	&__column {
+
+		&-image {
+			max-width: 100%;
+			max-height: 131px;
+		}
+
+		&-image img{
+			height: 100%;
+		}
 	
 		&-title {
 			font-size: 24px;
@@ -181,6 +234,15 @@ a, button, input, textarea{
 	}
 
 	&__column {
+
+		&-image {
+			max-width: 100%;
+			max-height: 200px;
+		}
+
+		&-image img{
+			height: 100%;
+		}
 	
 		&-title {
 			font-size: 24px;
@@ -221,7 +283,7 @@ a, button, input, textarea{
 			max-width: 300px;
 		}
 
-		&-text {
+		&-title {
 			font-size: 24px;
 			font-weight: 700;
 			margin-top: 30px;
@@ -240,24 +302,16 @@ a, button, input, textarea{
 		}
 	}
 
-	&__switcher {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+
+
+	&__select {
+		color: $darkblack-color;
+		background-color: $darkyellow-color;
+		font-size: 16px;
 		margin-top: 45px;
-		gap: 25px;
-	
-		&-item {
-			min-width: 20%;
-			border-radius: 5px;
-			font-size: 18px;
-			background-color: $darkyellow-color;
-			padding: 10px 25px;
-	
-			&:focus {
-				background-color: white;
-			}
-		}
+		padding: 10px 25px;
+		border-radius: 5px;
+		cursor: pointer;
 	}
 
 	&__column {
@@ -321,7 +375,6 @@ a, button, input, textarea{
 
 .git {
 	background: $blue-color;
-	padding: 120px 0px;
 
 	&__title {
 
@@ -379,14 +432,18 @@ a, button, input, textarea{
 
 .footer {
 	background-color: $darkblue-color;
-	padding: 40px 0px;
+	padding: 20px 0px;
 
 	&__links {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		font-size: 24px;
 		font-weight: 600;
 		line-height: 30px;
+
+		&-icon {
+			display: none;
+		}
 	
 		& a:hover {
 			color: $lightblue-color;
@@ -395,9 +452,89 @@ a, button, input, textarea{
 }
 
 @media screen and (max-width: 767px) {
+	#arrowTop {
+		visibility: hidden;
+	}
 
-	.header__menu {
-		display: none;
+	.header__logo {
+		z-index: 2;
+	}
+
+	.header__menu-icon {
+		display: block;
+		z-index: 2;
+		position: relative;
+		right: 20px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		
+		& span,
+		&::before,
+		&::after {
+			left: 0;
+			position: absolute;
+			height: 10%;
+			width: 100%;
+			transition: all 0.3s ease 0s;
+			background-color: #fff;
+		}
+
+		& span {
+			top: 50%;
+			transform: scale(1) translate(0px, -50%);
+		}
+
+		&._active span {
+			transform: scale(0) translate(0px, -50%);
+		}
+
+		&::before {
+			content: '';
+			top: 0;
+		}
+
+		&._active::before {
+			top: 50%;
+			transform: rotate(-45deg) translate(0px, -50%);
+		}
+
+		&::after {
+			content: '';
+			bottom: 0;
+		}
+
+		&._active::after {
+			bottom: 50%;
+			transform: rotate(45deg) translate(0px, 50%);
+		}
+	}
+
+	.header__menu-body {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		padding: 100px 30px 30px 30px;
+		transition: left 0.25s ease 0s;
+		overflow: auto;
+
+		&._active {
+			left: 0;
+		}
+	}
+
+	.header__menu-list {
+		flex-direction: column;
+		gap: 50px;
+		font-size: 30px;
+
+		& a:hover {
+			background-color: rgba(0, 0, 0, 0);
+		}
 	}
 
 	.column {
@@ -417,7 +554,11 @@ a, button, input, textarea{
 		gap: 25px;
 	}
 
-	.footer__links {
+	.footer__links-text {
 		display: none;
+	}
+
+	.footer__links-icon {
+		display: block;
 	}
 }

@@ -35,38 +35,41 @@ body {
 	font-family: 'Titillium Web';
 	color: $white-color;
 	text-align: center;
-	
+
 	&._lock {
 		overflow: hidden;
 	}
 }
 
-a, button, input, textarea{
+a,
+button,
+input,
+textarea {
 	color: inherit;
 }
 
-#arrowTop {
-	font-size: 30px;
-	padding: 10px;
-	bottom: 20px;
-	right: 20px;
-	color: $darkwhite-color;
-	background-color: $black-color;
-	border-radius: 5px;
-	position: fixed;
-	cursor: pointer;
-	opacity: 0.5;
-	z-index: 2;
+// #arrowTop {
+// 	font-size: 30px;
+// 	padding: 10px;
+// 	bottom: 20px;
+// 	right: 20px;
+// 	color: $darkwhite-color;
+// 	background-color: $black-color;
+// 	border-radius: 5px;
+// 	position: fixed;
+// 	cursor: pointer;
+// 	opacity: 0.5;
+// 	z-index: 2;
 
-	&::before {
-		content: '▲';
-	}
+// 	&::before {
+// 		content: '▲';
+// 	}
 
-	&:hover {
-		color: $white-color;
-		opacity: 0.75;
-	}
-}
+// 	&:hover {
+// 		color: $white-color;
+// 		opacity: 0.75;
+// 	}
+// }
 
 .container {
 	max-width: 1100px;
@@ -85,6 +88,7 @@ a, button, input, textarea{
 	line-height: 40px;
 	letter-spacing: 5px;
 	text-align: center;
+
 	&:after {
 		content: "";
 		display: block;
@@ -179,7 +183,7 @@ a, button, input, textarea{
 		font-weight: 700;
 		line-height: 50px;
 	}
-	
+
 	&__button {
 		background-color: $orange-color;
 		box-shadow: 0 3px 0 $darkorange-color;
@@ -189,14 +193,14 @@ a, button, input, textarea{
 
 .services {
 	background: $green-color;
-	
-	&__title {	
-		
+
+	&__title {
+
 		&:after {
 			background: $darkgreen-color
 		}
 	}
-	
+
 	&__column {
 
 		&-image {
@@ -204,18 +208,18 @@ a, button, input, textarea{
 			max-height: 131px;
 		}
 
-		&-image img{
+		&-image img {
 			height: 100%;
 		}
-	
+
 		&-title {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 18px;
 			margin: 60px 0px 30px;
 		}
-		
-		&-text {	
+
+		&-text {
 			font-weight: 300;
 			line-height: 24px;
 		}
@@ -240,25 +244,25 @@ a, button, input, textarea{
 			max-height: 200px;
 		}
 
-		&-image img{
+		&-image img {
 			height: 100%;
 		}
-	
+
 		&-title {
 			font-size: 24px;
 			font-weight: 700;
 			margin: 40px 0px 15px;
 		}
-		
+
 		&-subtitle {
 			color: $lightblue-color;
-		
+
 		}
-		
+
 		&-text {
 			margin: 30px 0px
 		}
-		
+
 		div &-links {
 			display: flex;
 			justify-content: space-around;
@@ -271,12 +275,12 @@ a, button, input, textarea{
 	color: $black-color;
 
 	&__title {
-	
+
 		&:after {
 			background-color: $darkwhite-color;
 		}
 	}
-	
+
 	&__column {
 
 		& img {
@@ -321,8 +325,12 @@ a, button, input, textarea{
 			font-size: 18px;
 			margin-top: 30px;
 		}
+
+		&._unselected {
+			display: none;
+		}
 	}
-	
+
 	&__button {
 		background: $green-color;
 		box-shadow: 0 3px 0 $darkgreen-color;
@@ -338,18 +346,18 @@ a, button, input, textarea{
 			background-color: $darkred-color;
 		}
 	}
-	
+
 	&__column {
 		max-width: 45%;
 		display: flex;
 		flex-direction: row;
 		gap: 25px;
-		
+
 		&-content {
 			text-align: left;
 			margin-left: 1em;
 		}
-		
+
 		&-text {
 			font-style: italic;
 			font-weight: 300;
@@ -357,14 +365,14 @@ a, button, input, textarea{
 			line-height: 31px;
 			flex: 1 1 auto;
 		}
-		
+
 		&-title {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 26px;
 			margin-top: 30px;
 		}
-		
+
 		&-subtitle {
 			font-size: 18px;
 			line-height: 26px;
@@ -399,13 +407,13 @@ a, button, input, textarea{
 			min-width: calc(50% - 10px);
 		}
 	}
-	
+
 	&__textarea {
 		margin-top: 25px;
 
 		&-item {
 			width: 100%;
-			max-width: 100%;	
+			max-width: 100%;
 			min-height: 200px;
 		}
 	}
@@ -422,7 +430,7 @@ a, button, input, textarea{
 	&__textarea-item::-webkit-input-placeholder {
 		color: $white-color;
 	}
-	
+
 	&__button {
 		color: white;
 		background-color: $lightblue-color;
@@ -444,7 +452,7 @@ a, button, input, textarea{
 		&-icon {
 			display: none;
 		}
-	
+
 		& a:hover {
 			color: $lightblue-color;
 		}
@@ -468,7 +476,7 @@ a, button, input, textarea{
 		width: 30px;
 		height: 18px;
 		cursor: pointer;
-		
+
 		& span,
 		&::before,
 		&::after {
@@ -560,5 +568,82 @@ a, button, input, textarea{
 
 	.footer__links-icon {
 		display: block;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	.section {
+		padding: 30px 0px;
+	}
+
+	.title {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	.subtitle {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.button {
+		font-size: 18px;
+		line-height: 26px;
+		padding: 15px 10px;
+		margin-top: 30px;
+	}
+
+	.row {
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+		margin-top: 40px;
+	}
+
+	.column {
+		min-width: 100%;
+	}
+
+	.circle svg {
+		max-width: 100%;
+	}
+
+	.welcome__title {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.skills {
+		&__row {
+			gap: 0px;
+		}
+
+		&__column {
+			max-width: 100%;
+			margin-bottom: 25px;
+		}
+	}
+
+	.testimonials__column {
+		flex-direction: column;
+
+		&-text {
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		&-title {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		&-subtitle {
+			font-size: 14px;
+			line-height: 14px;
+		}
+	}
+
+	.footer__links-icon img {
+		width: 100%;
 	}
 }

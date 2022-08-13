@@ -312,11 +312,10 @@
 					Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet <br>
 					consectetur, adipisci velit, sed quia non numquam
 				</div>
-				<select name="" class="portfolio__select select">
+				<select name="" class="portfolio__select" id="select" onchange="getSelectValue()">
 					<option value="all" class="portfolio__option option">ALL</option>
 					<option value="web" class="portfolio__option option">WEB</option>
 					<option value="apps" class="portfolio__option option">APPS</option>
-					<option value="icons" class="portfolio__option option">ICONS</option>
 				</select>
 				<div class="portfolio__row row">
 					<div class="portfolio__column">
@@ -449,8 +448,7 @@
 						<input class="git__inputs-item" id="email" type="email" placeholder="Your Email" required>
 					</div>
 					<div class="git__textarea">
-						<textarea class="git__textarea-item" id="message" placeholder="Your Message"
-							required></textarea>
+						<textarea class="git__textarea-item" id="message" placeholder="Your Message" required></textarea>
 					</div>
 					<button class="git__button button" type="submit">SEND MESSAGE</button>
 				</form>
@@ -459,8 +457,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__links">
-					<a href="https://www.facebook.com/profile.php?id=100008697765105" class="footer__links-item"
-						target="_blank">
+					<a href="https://www.facebook.com/profile.php?id=100008697765105" class="footer__links-item" target="_blank">
 						<div class="footer__links-text">Facebook</div>
 						<div class="footer__links-icon"><img src="img/footer/facebook.svg" alt="facebook logo"></div>
 					</a>

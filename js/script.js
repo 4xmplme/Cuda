@@ -60,3 +60,21 @@ for (let i = 1; i <= 4; i++) {
 		text: value => value + '%'
 	})
 }
+
+// 'select element'
+const getSelectValue = () => {
+	const columnArray = document.querySelectorAll('.portfolio__column')
+	let selectedValue = document.querySelector('#select').value
+
+	columnArray.forEach((element) => element.classList.add('_unselected'))
+
+	if (selectedValue === 'all') {
+		columnArray.forEach((element) => element.classList.remove('_unselected'))
+	} else if (selectedValue === 'web') {
+		columnArray[0].classList.remove('_unselected')
+		columnArray[3].classList.remove('_unselected')
+	} else if (selectedValue === 'apps') {
+		columnArray[1].classList.remove('_unselected')
+		columnArray[2].classList.remove('_unselected')
+	}
+}

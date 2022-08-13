@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(nullstyle.css);
 @import url(https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap);
 @font-face {
@@ -19,31 +18,11 @@ body._lock {
   overflow: hidden;
 }
 
-a, button, input, textarea {
+a,
+button,
+input,
+textarea {
   color: inherit;
-}
-
-#arrowTop {
-  font-size: 30px;
-  padding: 10px;
-  bottom: 20px;
-  right: 20px;
-  color: #dfe8ed;
-  background-color: #3c4761;
-  border-radius: 5px;
-  position: fixed;
-  cursor: pointer;
-  opacity: 0.5;
-  z-index: 2;
-}
-
-#arrowTop::before {
-  content: '▲';
-}
-
-#arrowTop:hover {
-  color: #ffffff;
-  opacity: 0.75;
 }
 
 .container {
@@ -298,6 +277,10 @@ div .team__column-links {
   margin-top: 30px;
 }
 
+.portfolio__column._unselected {
+  display: none;
+}
+
 .portfolio__button {
   background: #17c2a4;
   -webkit-box-shadow: 0 3px 0 #14a58c;
@@ -533,5 +516,74 @@ div .team__column-links {
   }
   .footer__links-icon {
     display: block;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .section {
+    padding: 30px 0px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .button {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 15px 10px;
+    margin-top: 30px;
+  }
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+  }
+  .column {
+    min-width: 100%;
+  }
+  .circle svg {
+    max-width: 100%;
+  }
+  .welcome__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .skills__row {
+    gap: 0px;
+  }
+  .skills__column {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+  .testimonials__column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials__column-text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .testimonials__column-title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .testimonials__column-subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .footer__links-icon img {
+    width: 100%;
   }
 }

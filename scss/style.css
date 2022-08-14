@@ -1,19 +1,10 @@
 @import url(nullstyle.css);
 @import url(https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap);
-@font-face {
-  font-family: 'Titillium Web Regular';
-  src: local("Titillium Web Regular"), url(../fonts/TitilliumWeb-Regular.ttf) format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
-  font-family: 'Titillium Web';
+  font-family: "Titillium Web";
   color: #ffffff;
   text-align: center;
 }
-
 body._lock {
   overflow: hidden;
 }
@@ -43,7 +34,6 @@ textarea {
   letter-spacing: 5px;
   text-align: center;
 }
-
 .title:after {
   content: "";
   display: block;
@@ -77,29 +67,18 @@ textarea {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 50px;
   margin-top: 80px;
 }
 
 .column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 20%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 .image img {
@@ -109,35 +88,22 @@ textarea {
 .header {
   background: #87509c;
 }
-
 .header__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 30px;
 }
-
 .header__menu-icon {
   display: none;
 }
-
 .header__menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__menu-list a {
   padding: 10px 15px;
   margin-left: 10px;
 }
-
 .header__menu-list a:hover {
   background: #643a79;
   border: 0px solid;
@@ -147,44 +113,36 @@ textarea {
 .welcome {
   background: #87509c;
 }
-
 .welcome__title {
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
 }
-
 .welcome__button {
   background-color: #eb7d4b;
-  -webkit-box-shadow: 0 3px 0 #c86a40;
-          box-shadow: 0 3px 0 #c86a40;
+  box-shadow: 0 3px 0 #c86a40;
   margin-top: 60px;
 }
 
 .services {
   background: #17c2a4;
 }
-
 .services__title:after {
   background: #14a58c;
 }
-
 .services__column-image {
   max-width: 100%;
   max-height: 131px;
 }
-
 .services__column-image img {
   height: 100%;
 }
-
 .services__column-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 18px;
   margin: 60px 0px 30px;
 }
-
 .services__column-text {
   font-weight: 300;
   line-height: 24px;
@@ -194,55 +152,42 @@ textarea {
   background: #e7f1f8;
   color: #3c4761;
 }
-
 .team__title:after {
   background-color: #c8d9e5;
 }
-
 .team__column-image {
   max-width: 100%;
   max-height: 200px;
 }
-
 .team__column-image img {
   height: 100%;
 }
-
 .team__column-title {
   font-size: 24px;
   font-weight: 700;
   margin: 40px 0px 15px;
 }
-
 .team__column-subtitle {
   color: #30bae7;
 }
-
 .team__column-text {
   margin: 30px 0px;
 }
-
 div .team__column-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .skills {
   background: white;
   color: #3c4761;
 }
-
 .skills__title:after {
   background-color: #dfe8ed;
 }
-
 .skills__column img {
   max-width: 300px;
 }
-
 .skills__column-title {
   font-size: 24px;
   font-weight: 700;
@@ -253,11 +198,9 @@ div .team__column-links {
   background: #ffdd99;
   color: #393939;
 }
-
 .portfolio .portfolio__title:after {
   background-color: #ebc985;
 }
-
 .portfolio__select {
   color: #393939;
   background-color: #ebc985;
@@ -267,68 +210,50 @@ div .team__column-links {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .portfolio__column {
   max-width: 45%;
 }
-
 .portfolio__column-text {
   font-size: 18px;
   margin-top: 30px;
 }
-
 .portfolio__column._unselected {
   display: none;
 }
-
 .portfolio__button {
   background: #17c2a4;
-  -webkit-box-shadow: 0 3px 0 #14a58c;
-          box-shadow: 0 3px 0 #14a58c;
+  box-shadow: 0 3px 0 #14a58c;
 }
 
 .testimonials {
   background: #d74680;
 }
-
 .testimonials__title:after {
   background-color: #b73c6d;
 }
-
 .testimonials__column {
   max-width: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 25px;
 }
-
 .testimonials__column-content {
   text-align: left;
   margin-left: 1em;
 }
-
 .testimonials__column-text {
   font-style: italic;
   font-weight: 300;
   font-size: 21px;
   line-height: 31px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-
 .testimonials__column-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 26px;
   margin-top: 30px;
 }
-
 .testimonials__column-subtitle {
   font-size: 18px;
   line-height: 26px;
@@ -338,80 +263,59 @@ div .team__column-links {
 .git {
   background: #3c5499;
 }
-
 .git__title:after {
   background-color: #273a71;
 }
-
 .git div.git__subtitle {
   max-width: 90%;
 }
-
 .git__form {
   margin: 70px 10px 0px 10px;
 }
-
 .git__inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .git__inputs-item {
   min-width: calc(50% - 10px);
 }
-
 .git__textarea {
   margin-top: 25px;
 }
-
 .git__textarea-item {
   width: 100%;
   max-width: 100%;
   min-height: 200px;
 }
-
 .git__inputs-item, .git__textarea-item {
   background-color: #273a71;
   padding: 20px;
   border-radius: 5px;
   font-size: 18px;
 }
-
 .git__inputs-item::-webkit-input-placeholder, .git__textarea-item::-webkit-input-placeholder {
   color: #ffffff;
 }
-
 .git__button {
   color: white;
   background-color: #30bae7;
-  -webkit-box-shadow: 0 3px 0 #299ec5;
-          box-shadow: 0 3px 0 #299ec5;
+  box-shadow: 0 3px 0 #299ec5;
 }
 
 .footer {
   background-color: #273a71;
   padding: 20px 0px;
 }
-
 .footer__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
 }
-
 .footer__links-icon {
   display: none;
 }
-
 .footer__links a:hover {
   color: #30bae7;
 }
@@ -437,36 +341,31 @@ div .team__column-links {
     position: absolute;
     height: 10%;
     width: 100%;
-    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     background-color: #fff;
   }
   .header__menu-icon span {
     top: 50%;
-    -webkit-transform: scale(1) translate(0px, -50%);
-            transform: scale(1) translate(0px, -50%);
+    transform: scale(1) translate(0px, -50%);
   }
   .header__menu-icon._active span {
-    -webkit-transform: scale(0) translate(0px, -50%);
-            transform: scale(0) translate(0px, -50%);
+    transform: scale(0) translate(0px, -50%);
   }
   .header__menu-icon::before {
-    content: '';
+    content: "";
     top: 0;
   }
   .header__menu-icon._active::before {
     top: 50%;
-    -webkit-transform: rotate(-45deg) translate(0px, -50%);
-            transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -50%);
   }
   .header__menu-icon::after {
-    content: '';
+    content: "";
     bottom: 0;
   }
   .header__menu-icon._active::after {
     bottom: 50%;
-    -webkit-transform: rotate(45deg) translate(0px, 50%);
-            transform: rotate(45deg) translate(0px, 50%);
+    transform: rotate(45deg) translate(0px, 50%);
   }
   .header__menu-body {
     position: fixed;
@@ -477,7 +376,6 @@ div .team__column-links {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 100px 30px 30px 30px;
-    -webkit-transition: left 0.25s ease 0s;
     transition: left 0.25s ease 0s;
     overflow: auto;
   }
@@ -485,10 +383,7 @@ div .team__column-links {
     left: 0;
   }
   .header__menu-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 50px;
     font-size: 30px;
   }
@@ -505,10 +400,7 @@ div .team__column-links {
     max-width: 90%;
   }
   .git__inputs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 25px;
   }
   .footer__links-text {
@@ -518,7 +410,6 @@ div .team__column-links {
     display: block;
   }
 }
-
 @media screen and (max-width: 424px) {
   .section {
     padding: 30px 0px;
@@ -538,13 +429,8 @@ div .team__column-links {
     margin-top: 30px;
   }
   .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     gap: 25px;
     margin-top: 40px;
   }
@@ -566,10 +452,7 @@ div .team__column-links {
     margin-bottom: 25px;
   }
   .testimonials__column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .testimonials__column-text {
     font-size: 16px;
